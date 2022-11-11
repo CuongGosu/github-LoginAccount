@@ -1,0 +1,28 @@
+{
+  "account": [
+    {
+      "id": "cuong",
+      "pass": "123"
+    },
+    {
+      "id": "hoang",
+      "pass": "123"
+    },
+    {
+      "id": "hieu",
+      "pass": "asd"
+    },
+    {
+      "id": "hieu2",
+      "pass": "asd"
+    },
+    {
+      "id": "hieu3",
+      "pass": "asd"
+    },
+    {
+      "id": "cuong2",
+      "pass": "asd"
+    }
+  ]
+}
