@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form action="" method="post" class="form-signIn active">
+      <h1>Dang nhap</h1>
+      <div>
+        <h3>Ten tai khoan</h3>
+        <input type="text" name="id" class="idSignIn" />
+      </div>
+      <div>
+        <h3>Mat khau</h3>
+        <input type="text" name="pass" class="passSignIn" />
+      </div>
+      <br />
+      <button class="btnDangNhap" type="submit">Dang nhap</button>
+      <p>Khong co tai khoan</p>
+      <a class="Open-SignUp">Dang ky</a>
+    </form>
+    <form action="" method="post" class="form-signUp">
+      <h1>Dang Ky</h1>
+      <div>
+        <h3>Ten tai khoan</h3>
+        <input type="text" name="id" class="idSignUp" />
+      </div>
+      <div>
+        <h3>Mat khau</h3>
+        <input type="text" name="pass" class="passSignUp" />
+      </div>
+      <br />
+      <button class="btnDangKy" type="submit">Dang Ky</button>
+      <p>Da co tai khoan</p>
+      <a class="Open-SignIn">Dang nhap tai day</a>
+    </form>
+  </body>
+  <script src="main.js"></script>
+
+  <script>
+    ValidatorSignIn({
+      form: ".form-signIn",
+      id: ".idSignIn",
+      pass: ".passSignIn",
+      changeForm: ".Open-SignUp",
+      formSignUp: ".form-signUp",
+      onSubmit: function (data) {
+        // fetchJSON("http://localhost:3000/account", data);
+        loginAccount("http://localhost:3000/account", data);
+      },
+    });
+    ValidatorSignUp({
+      form: ".form-signUp",
+      id: ".idSignUp",
+      pass: ".passSignUp",
+      changeForm: ".Open-SignIn",
+      formSignIn: ".form-signIn",
+      onSubmit: function (data) {
+        creatAccount2("http://localhost:3000/account", data);
+      },
+    });
+  </script>
+</html>

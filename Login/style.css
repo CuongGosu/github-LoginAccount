@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.form-signUp,
+.form-signIn {
+  visibility: hidden;
+  opacity: 0;
+}
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+a {
+  color: #2d5cb2;
+}
+.form-signIn {
+  position: relative;
+}
+.form-signUp {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
